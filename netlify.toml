@@ -14,3 +14,5 @@ publish = "_site"
     start = 'eleventy --serve'
     wait-on = 'http://localhost:8080'
     record = true
+    group = 'before deploy'
+    tag = 'test-build'
