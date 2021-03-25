@@ -8,13 +8,13 @@ workflows:
       # "cypress" is the name of the imported orb
       # "run" is the name of the job defined in Cypress orb
       - cypress/run:
-          requires: 
-            - cypress/install
+          requires:
+              - cypress/install
           start: npm start
           wait-on: 'http://localhost:8080'
           no-workspace: true
           record: true
-          tags: circleci
-          group: 
           parallel: true
           parallelism: 4
+          group: 'Parallel spec'
+          tags: "circleci" 
